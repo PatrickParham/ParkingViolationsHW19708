@@ -23,7 +23,7 @@ os.environ['APP_KEY'] = 'YOUR UNIQUE API TOKEN'
 The entry for the APP_KEY argument in the nyc_parking function within the main.py script should therefore be 'APP_KEY'
 
 ### Output 
-Based on running the main.py script in Docker or locally, the script will return the page size of json entries specified in the function and a csv output to the pwd if specified 1 or not entered and run using volume in Docker
+Based on running the main.py script in Docker or locally, the script will return the page size of json entries specified in the function and a csv output to the pwd if specified 1 or not entered when run using volume in Docker
 
 ## Docker Image Build 
 ### Build:
