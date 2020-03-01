@@ -1,7 +1,7 @@
 ### 9708 HW Part 1
 
 ### Using OS Environs Secret Key Call ODNYC API To Retrieve Parking Violations Data
-### JSON and optional CSV Output to Local pwd based on arguments specified in Funtion 
+### JSON and optional CSV Output to Local pwd based on arguments specified in function 
 
 import argparse
 import sodapy
