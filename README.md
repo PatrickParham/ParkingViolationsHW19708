@@ -3,6 +3,8 @@
 The following project provides a workflow to connect to the OpenData NYC API to analyze parking violations in the city of
 New York since 2016. 
 
+The scope of the project will expand beyond basic Python Scripting to include ElasticSearch, Kibana, and EC2 functionality.
+
 ## Data Set
 [Open Parking and Camera Violations](https://dev.socrata.com/foundry/data.cityofnewyork.us/nc67-uf89)
 
