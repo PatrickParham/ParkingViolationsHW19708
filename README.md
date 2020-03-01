@@ -5,17 +5,22 @@ New York since 2016.
 
 The scope of the project will expand beyond basic Python Scripting to include ElasticSearch, Kibana, and EC2 functionality.
 
-## Data Set
-[Open Parking and Camera Violations](https://dev.socrata.com/foundry/data.cityofnewyork.us/nc67-uf89)
+## Resources
+[STA 9780 - Analyzing Millions of NYC Parking Violations}(https://docs.google.com/document/d/1jjArRAV462E6N6IcSBxPAtGBoIy3Iqn0KDEgRgaxC8A/edit#)
+[Data Set - Open Parking and Camera Violations](https://dev.socrata.com/foundry/data.cityofnewyork.us/nc67-uf89)
+[Connecting to API - Create ODNYC Login and Request API Token](https://data.cityofnewyork.us/login)
+[Docker Documentation](https://docs.docker.com/)
+[sodapy/Socrata Documentation](https://dev.socrata.com/)
 
-## Connecting to API
-[Create ODNYC Login and Request API Token](https://data.cityofnewyork.us/login)
+# Part I: Python Scripting
 
 ## Using API Token Seceretly
 To ensure that your ODNYC API Token remains private and does not get posted online, please declare and 'APP_KEY'  
 environmental variable that will be called in the primary script instead of posting hardcoded values or manually entering a long hashed string:
 
 os.environ['APP_KEY'] = 'YOUR UNIQUE API TOKEN'
+
+The entry for the APP_KEY argument in the nyc_parking function within the main.py script should therefore be 'APP_KEY'
 
 ### Output 
 Based on running the main.py script in Docker or locally, the script will return the page size of json entries specified in the function and a csv output to the pwd if specified 1 or not entered and run using volume in Docker
@@ -67,4 +72,4 @@ docker push pparham/bigdata1
 sudo apt install docker.io  
 sudo docker login --username  
 sudo docker pull username/project name  
-sudo docker run -v $(pwd):/app -it bigdata1:1.0 python3 main.py --APP_KEY 'APP_KEY' --page_size {'Enter Int'} --output {'1 for csv to pwd, 0 for no csv, 1 by default'} 
+sudo docker run -v $(pwd):/app -it bigdata1:1.0 python3 main.py --APP_KEY 'APP_KEY' --page_size {'Enter Int'} --output {'1 for csv to pwd, 0 for no csv, 1 by default'}
