@@ -15,6 +15,9 @@ environmental variable that will be called in the primary script instead of post
 
 os.environ['APP_KEY'] = 'YOUR UNIQUE API TOKEN'
 
+### Output 
+Based on running the main.py script in Docker or locally, the script will return the page size of json entries specified in the function and a csv output to the pwd if specified 1 or not entered and run using volume in Docker
+
 ## Docker Image Build 
 ### Build:
 docker build -t bigdata1:1.0 .
