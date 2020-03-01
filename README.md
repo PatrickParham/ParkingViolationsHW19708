@@ -6,11 +6,11 @@ New York since 2016.
 The scope of the project will expand beyond basic Python Scripting to include ElasticSearch, Kibana, and EC2 functionality.
 
 ## Resources
-[STA 9780 - Analyzing Millions of NYC Parking Violations}(https://docs.google.com/document/d/1jjArRAV462E6N6IcSBxPAtGBoIy3Iqn0KDEgRgaxC8A/edit#)
-[Data Set - Open Parking and Camera Violations](https://dev.socrata.com/foundry/data.cityofnewyork.us/nc67-uf89)
-[Connecting to API - Create ODNYC Login and Request API Token](https://data.cityofnewyork.us/login)
-[Docker Documentation](https://docs.docker.com/)
-[sodapy/Socrata Documentation](https://dev.socrata.com/)
+[STA 9780 - Analyzing Millions of NYC Parking Violations](https://docs.google.com/document/d/1jjArRAV462E6N6IcSBxPAtGBoIy3Iqn0KDEgRgaxC8A/edit#)  
+[Data Set - Open Parking and Camera Violations](https://dev.socrata.com/foundry/data.cityofnewyork.us/nc67-uf89)  
+[Connecting to API - Create ODNYC Login and Request API Token](https://data.cityofnewyork.us/login)  
+[Docker Documentation](https://docs.docker.com/)  
+[sodapy/Socrata Documentation](https://dev.socrata.com/)  
 
 # Part I: Python Scripting
 
