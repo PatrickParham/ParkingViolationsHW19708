@@ -77,10 +77,7 @@ RUN pip install -r requirements.txt
 ### Deploy via Dockerhub
  ```console
 docker images | grep bigdata1
- ```
- COPY THE TAG 
-```console 
-docker tag 819a6dd0320e pparham/bigdata1:1.0
+docker tag {'COPY THE TAG'} pparham/bigdata1:1.0
 docker push pparham/bigdata1
  ```
 
@@ -120,14 +117,17 @@ services:
     ports:
       - "5601:5601"
  ```
+ 
 ### Build ElasticSearch and Kibana:
 ```console
 docker-compose build pyth
 ```
+
 ### Initiate ElasticSearch and Kibana:
 ```console
 docker-compose up -d
 ```
+
 ### Push to ElasticSearch:
 ```console
 docker-compose run -v ${PWD}:/app/out pyth /bin/bash
