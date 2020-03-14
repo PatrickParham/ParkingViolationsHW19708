@@ -128,11 +128,11 @@ docker-compose up -d
 ```
 
 ### Push to ElasticSearch:
+In order to push to ElasticSearch, the --elastics argument is now required. The --output argument that allows users to receive a csv version of the data in their working directory remains optional.
 ```console
 docker-compose run -v ${PWD}:/app/out pyth /bin/bash
 python3 main.py --APP_KEY 'APP_KEY' --page_size 10  --elastics ELASTICS --output OUTPUT
 ```
-Note: In order to push to ElasticSearch, the --elastics argument is required. The --output argument that allows users to receive a csv version of the data in their working directory remains optional.
 
 ### Lanuch Kibana in Browser:
 [http://localhost:5601/app/kibana](http://localhost:5601/app/kibana)
