@@ -1,9 +1,7 @@
 # ParkingViolations9760
 
 The following project provides a workflow to connect to the OpenData NYC API to analyze parking violations in the city of
-New York since 2016. 
-
-The scope of the project will expand beyond basic Python Scripting to include ElasticSearch, Kibana, and EC2 functionality.
+New York since 2016. The primary script ('main.py') includes functionality to allow users to export to csv and analyze the specific API call with ElasticSearch/Kibana.
 
 ## Resources
 [STA 9760 - Analyzing Millions of NYC Parking Violations](https://docs.google.com/document/d/1jjArRAV462E6N6IcSBxPAtGBoIy3Iqn0KDEgRgaxC8A/edit#)  
@@ -12,7 +10,6 @@ The scope of the project will expand beyond basic Python Scripting to include El
 [Docker Documentation](https://docs.docker.com/)  
 [sodapy/Socrata Documentation](https://dev.socrata.com/)  
 
-# Part I: Python Scripting
 
 ## Using API Token Seceretly
 To ensure that your ODNYC API Token remains private and does not get posted online, please declare and 'APP_KEY'  
@@ -23,7 +20,9 @@ os.environ['APP_KEY'] = 'YOUR UNIQUE API TOKEN'
 The entry for the APP_KEY argument in the nyc_parking function within the main.py script should therefore be 'APP_KEY'
 
 ### Output 
-Based on running the main.py script in Docker or locally, the script will return the page size of json entries specified in the function and a csv output to the pwd if specified 1 or not entered when run using volume in Docker
+Based on running the main.py script in Docker or locally, the script will return the page size of json entries specified in the function and a csv output to the pwd if included. 
+
+The --elastics argument should not be included at this time as ElasticSearch has not yet been stood up in the workflow.
 
 ## Docker Image Build 
 ### Build:
@@ -133,5 +132,7 @@ docker-compose up -d
 docker-compose run -v ${PWD}:/app/out pyth /bin/bash
 python3 main.py --APP_KEY 'APP_KEY' --page_size 10  --elastics ELASTICS --output OUTPUT
 ```
+Note: In order to push to ElasticSearch, the --elastics argument is required. The --output argument that allows users to receive a csv version of the data in their working directory remains optional.
+
 ### Lanuch Kibana in Browser:
 [http://localhost:5601/app/kibana](http://localhost:5601/app/kibana)
