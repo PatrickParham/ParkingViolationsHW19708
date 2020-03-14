@@ -27,8 +27,10 @@ Based on running the main.py script in Docker or locally, the script will return
 
 ## Docker Image Build 
 ### Build:
+ ```console
 docker build -t bigdata1:1.0 .
-
+ ```
+ 
 ### Initial Dockerfile
 FROM python:3.7  
 RUN pip install requests  
@@ -58,8 +60,9 @@ docker login --username=username
 ### Update Dockerfile
 FROM python:3.7  
 WORKDIR /app  
-COPY . .  
-RUN pip install -r requirements.txt  
+COPY main.py /app
+COPY requirements.txt /app/requirements.txt
+RUN pip install -r requirements.txt 
 
 ### Deploy via Dockerhub
 docker images | grep bigdata1  
