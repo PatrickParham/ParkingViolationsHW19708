@@ -90,3 +90,33 @@ sudo apt install docker.io
 sudo docker login --username  
 sudo docker pull username/project name  
 sudo docker run -v $(pwd):/app -it bigdata1:1.0 python3 main.py --APP_KEY 'APP_KEY' --page_size {'Enter Int'} --output {'1 for csv to pwd, 0 for no csv, 1 by default'}
+
+## Launching ElasticSearch and Kibana
+### Creating docker-compose.yml:
+ ```py
+version: '3'
+services:
+  pyth:
+    network_mode: host
+    container_name: pyth
+    build:
+      context: .
+    volumes:
+      - .:/app:rw
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:6.3.2
+    environment:
+      - cluster.name=docker-cluster
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    ports:
+      - "9200:9200"
+  kibana:
+    image: docker.elastic.co/kibana/kibana:6.3.2
+    ports:
+      - "5601:5601"
+ ```
