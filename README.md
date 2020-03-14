@@ -32,43 +32,57 @@ docker build -t bigdata1:1.0 .
  ```
  
 ### Initial Dockerfile
+```py
 FROM python:3.7  
 RUN pip install requests  
 ENV HELLO = 1  
 WORKDIR /app  
 COPY main.py /app  
+```
 
 ### Get Requirements.txt Contents from Terminal Mode
+ ```console
 docker run -it bigdata1:1.0 /bin/bash  
 pip freeze
+ ```
 
 ### Update Dockerfile
+```py
 FROM python:3.7  
 WORKDIR /app  
 COPY main.py /app  
 COPY requirements.txt /app  
 RUN pip install -r requirements.txt  
+```
 
 docker build -t bigdata1:1.0 .
 
 ### To Test:
-docker run -v $(pwd):/app -it bigdata1:1.0 python3 main.py --APP_KEY 'APP_KEY' --page_size {'Enter Int'} --output {'1 for csv to pwd, 0 for no csv, 1 by default'}
+ ```console
+docker run -v $(pwd):/app -it bigdata1:1.0 python3 main.py --APP_KEY 'APP_KEY' --page_size {'Enter Int'} --output OUTPUT
+ ```
 
 ### Login to Dockerhub
 docker login --username=username
 
 ### Update Dockerfile
+```py
 FROM python:3.7  
 WORKDIR /app  
 COPY main.py /app
 COPY requirements.txt /app/requirements.txt
 RUN pip install -r requirements.txt 
+```
 
 ### Deploy via Dockerhub
-docker images | grep bigdata1  
-COPY THE TAG  
+ ```console
+docker images | grep bigdata1
+ ```
+ COPY THE TAG 
+```console 
 docker tag 819a6dd0320e pparham/bigdata1:1.0
 docker push pparham/bigdata1
+ ```
 
 ## Launching from EC2
 #### (Instructions Example for Ubuntu)
