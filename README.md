@@ -120,3 +120,16 @@ services:
     ports:
       - "5601:5601"
  ```
+### Build ElasticSearch and Kibana:
+```console
+docker-compose build pyth
+```
+### Initiate ElasticSearch and Kibana:
+```console
+docker-compose up -d
+```
+### Push to ElasticSearch:
+```console
+docker-compose run -v ${PWD}:/app/out pyth /bin/bash
+python3 main.py --APP_KEY 'APP_KEY' --page_size 10  --elastics ELASTICS --output OUTPUT
+```
