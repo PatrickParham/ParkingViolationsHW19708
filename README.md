@@ -24,7 +24,7 @@ Based on running the main.py script in Docker or locally, the script will return
 
 The --elastics argument should not be included at this time as ElasticSearch has not yet been stood up in the workflow.
 
-## Docker Image Build 
+# Docker Image Build and Initial Script 
 ### Build:
  ```console
 docker build -t bigdata1:1.0 .
@@ -91,7 +91,7 @@ sudo docker login --username
 sudo docker pull username/project name  
 sudo docker run -v $(pwd):/app -it bigdata1:1.0 python3 main.py --APP_KEY 'APP_KEY' --page_size {'Enter Int'} --output {'1 for csv to pwd, 0 for no csv, 1 by default'}
 
-## Launching ElasticSearch and Kibana
+# Launching ElasticSearch and Kibana
 ### Creating docker-compose.yml:
  ```py
 version: '3'
