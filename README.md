@@ -151,3 +151,5 @@ python3 main.py --APP_KEY 'APP_KEY' --page_size 10  --elastics ELASTICS --output
 #### The Following Visualizations Were Built on a 100k Record Load
 ### Violations by Borough:
 ![](images/violations_by_borough.png)
+### Top 5 Violations for All Boroughs:
+![](images/top_5_violations_for_all_boroughs.png)
