@@ -1,5 +1,6 @@
 # ParkingViolations9760
 *** ReadMe Updated to Include Parts II & III
+
 The following project provides a workflow to connect to the OpenData NYC API to analyze parking violations in the city of
 New York since 2016. The primary script ('main.py') includes functionality to allow users to export to csv and analyze the specific API call with ElasticSearch/Kibana.
 
