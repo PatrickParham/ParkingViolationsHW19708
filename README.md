@@ -140,3 +140,5 @@ python3 main.py --APP_KEY 'APP_KEY' --page_size 10  --elastics ELASTICS --output
 
 ### Lanuch Kibana in Browser:
 [http://localhost:5601/app/kibana](http://localhost:5601/app/kibana)
+
+### Configure Index Based on Date Data Type:
