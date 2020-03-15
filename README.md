@@ -24,6 +24,7 @@ Based on running the main.py script in Docker or locally, the script will return
 
 The --elastics argument should not be included at this time as ElasticSearch has not yet been stood up in the workflow.
 
+
 # Docker Image Build and Initial Script 
 ### Build:
  ```console
