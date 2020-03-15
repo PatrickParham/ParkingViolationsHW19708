@@ -153,3 +153,5 @@ python3 main.py --APP_KEY 'APP_KEY' --page_size 10  --elastics ELASTICS --output
 ![](images/violations_by_boroughs.png)
 ### Top 5 Violations for All Boroughs:
 ![](images/top_5_violations_for_all_boroughs.png)
+### Top 5 Violations Makeup by Borough:
+1[](images/violation_makeup _by_borough.png)
