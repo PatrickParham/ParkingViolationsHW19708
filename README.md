@@ -148,6 +148,6 @@ python3 main.py --APP_KEY 'APP_KEY' --page_size 10  --elastics ELASTICS --output
 ![](images/create_index.png)
 
 # Examples of Kibana Visualizations
-## The Following Visualizations Were Built on a 100k Record Load
+#### The Following Visualizations Were Built on a 100k Record Load
 ### Violations by Borough:
 ![](images/violations_by_borough.png)
