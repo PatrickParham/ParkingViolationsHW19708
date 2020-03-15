@@ -54,7 +54,9 @@ COPY requirements.txt /app
 RUN pip install -r requirements.txt  
 ```
 
+ ```console
 docker build -t bigdata1:1.0 .
+ ```
 
 ### To Test:
  ```console
@@ -62,8 +64,10 @@ docker run -v $(pwd):/app -it bigdata1:1.0 python3 main.py --APP_KEY 'APP_KEY' -
  ```
 
 ### Login to Dockerhub
+ ```console
 docker login --username=username
-
+ ```
+ 
 ### Update Dockerfile
 ```py
 FROM python:3.7  
