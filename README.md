@@ -157,3 +157,9 @@ python3 main.py --APP_KEY 'APP_KEY' --page_size 10  --elastics ELASTICS --output
 ![](images/violation_makeup_by_borough.png)
 ### Dashboard Example
 ![](images/dashboard_example.png)
+
+
+# Blog Post
+Through this exercise of developing an entire workflow utilizing Docker and ElasticSearch/Kibana. I plan to utilize these tools in my preferred area of work upon finishing the MS Stats Program.
+
+With an interest in developing a Market Research consultancy within the Greater New Orleans Metropolitan Area, I believe Docker and ElasticSearch/Kibana will be invaluable for organizing data from the city government website and overlaying data collected from original firm studies that utilize both tablature and spatial datasets. I think the resources provided by these opensource tools will contribute in a significant way to developing my business and achieving insights on behalf of my clients.
