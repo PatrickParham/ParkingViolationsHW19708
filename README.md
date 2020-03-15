@@ -92,6 +92,7 @@ sudo docker login --username
 sudo docker pull username/project name  
 sudo docker run -v $(pwd):/app -it bigdata1:1.0 python3 main.py --APP_KEY 'APP_KEY' --page_size {'Enter Int'} --output {'1 for csv to pwd, 0 for no csv, 1 by default'}
 
+
 # Launching ElasticSearch and Kibana
 ### Creating docker-compose.yml:
  ```py
@@ -143,3 +144,5 @@ python3 main.py --APP_KEY 'APP_KEY' --page_size 10  --elastics ELASTICS --output
 [http://localhost:5601/app/kibana](http://localhost:5601/app/kibana)
 
 ### Configure Index Based on Date Data Type:
+
+# Examples of Kibana Visualizations
